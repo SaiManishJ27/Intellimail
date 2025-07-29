@@ -5,7 +5,7 @@ def generate_email_response(email_text, tone):
     try:
         genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('models/gemini-1.5-pro-latest')
 
         prompt = f"""
         You are an AI assistant specialized in drafting professional and effective email replies.
